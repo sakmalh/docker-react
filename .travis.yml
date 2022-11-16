@@ -6,3 +6,6 @@ services:
 before_install:
   - docker build -t sakmalh/docker-react -f Dockerfile.dev .
 
+script:
+  - docker run -e CI=true sakmalh/docker-react npm run test
+  
