@@ -1,0 +1,8 @@
+language: generic 
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t sakmalh/docker-react -f Dockerfile.dev .
+
